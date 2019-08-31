@@ -1,12 +1,10 @@
 {
   "version": 2,
   "name": "now-ps",
-  "builds": [
-    {
-      "src": "bower.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "output" }
-    }
-  ]
+  {
+    "scripts": {
+        "build": "pulp run"
+      }
+  }
 }
 
