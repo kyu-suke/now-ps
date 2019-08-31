@@ -15,7 +15,8 @@ main = do
     writeString writable UTF8 "Hello!" do 
       end writable (pure unit)
 
-  listen server { hostname: "localhost", port: 8080, backlog: Nothing } do 
-    log "Listening on localhost:8080!"
+  hoge <- log "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  listen server { hostname: "localhost", port: 3000, backlog: Nothing } do 
+    log "Listening on localhost:3000!"
 
 
