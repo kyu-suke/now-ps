@@ -20,3 +20,5 @@ main = do
     log "Listening on localhost:3000!"
 
 
+respo :: String
+respo = "hello from purescript"
