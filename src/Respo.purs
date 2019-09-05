@@ -1,11 +1,15 @@
-module Respo (respo, fuga) where
+module Respo (respo, fuga, hndl) where
 
 import Data.Function.Uncurried (Fn2, runFn2)
+import Node.HTTP
 
 
 respo :: String
 respo = "hello from purescript"
 
 foreign import hogeImpl :: Fn2 String String String
-fuga :: String
-fuga = runFn2 hogeImpl "aaa" "bbb"
+fuga :: String -> String -> String
+fuga x y = runFn2 hogeImpl x y
+
+hndl :: Request -> String
+hndl req = requestURL req
