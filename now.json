@@ -2,15 +2,26 @@
   "version": 2,
   "name": "now-ps",
   "builds": [
+    { "src": "*.html", "use": "@now/static" },
     {
-      "src": "main.js",
+      "src": "*.js",
       "use": "@now/node"
     }
   ],
   "routes": [
     {
+      "src": "index.html",
+      "dest": "index.html"
+    },
+    {
       "src": "(.*)",
-      "dest": "main.js"
+      "methods": ["GET"],
+      "dest": "get.js"
+    },
+    {
+      "src": "(.*)",
+      "methods": ["POST"],
+      "dest": "post.js"
     }
   ]
 }

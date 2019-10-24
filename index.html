@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>now purescript sample</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<p>response</p>
+<div id="res"></div>
+<button id="send">send</div>
+<script>
+$(function(){
+    $("#send").click(function(){
+        $.post('/hoge', {}, function(r){
+            console.log(r)
+        })
+    })
+})
+</script>
+</body>
+</html>
