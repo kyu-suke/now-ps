@@ -22,6 +22,21 @@
       "src": "(.*)",
       "methods": ["POST"],
       "dest": "post.js"
+    },
+    {
+      "src": "(.*)",
+      "methods": ["PUT"],
+      "dest": "put.js"
+    },
+    {
+      "src": "(.*)",
+      "methods": ["PATCH"],
+      "dest": "patch.js"
+    },
+    {
+      "src": "(.*)",
+      "methods": ["DELETE"],
+      "dest": "delete.js"
     }
   ]
 }

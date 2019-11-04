@@ -8,13 +8,49 @@
 <body>
 <p>response</p>
 <div id="res"></div>
-<button id="send">send</div>
+<button id="get">get</div>
+<button id="post">post</div>
+<button id="put">put</div>
+<button id="patch">patch</div>
+<button id="delete">delete</div>
 <script>
 $(function(){
-    $("#send").click(function(){
+    $("#get").click(function(){
+        $.get('/hoge', {}, function(r){
+            console.log(r)
+        })
+    })
+    $("#post").click(function(){
         $.post('/hoge', {}, function(r){
             console.log(r)
         })
+    })
+    $("#put").click(function(){
+        $.ajax({
+            url: '/hoge',
+            type: 'PUT',
+            success: function(r) {
+                console.log(r)
+            }
+        });
+    })
+    $("#patch").click(function(){
+        $.ajax({
+            url: '/hoge',
+            type: 'PATCH',
+            success: function(r) {
+                console.log(r)
+            }
+        });
+    })
+    $("#delete").click(function(){
+        $.ajax({
+            url: '/hoge',
+            type: 'DELETE',
+            success: function(r) {
+                console.log(r)
+            }
+        });
     })
 })
 </script>
